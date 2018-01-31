@@ -258,7 +258,7 @@ export default class Camera extends React.Component<PropsType> {
   };
 
   async componentWillMount() {
-    const hasVideoAndAudio = true; //TODO implement capture mode for camera / video like RCTCamera. Now, infer always video.
+    const hasVideoAndAudio = false; //TODO implement capture mode for camera / video like RCTCamera. Now, infer always video.
     const isAuthorized = await requestPermissions(hasVideoAndAudio, CameraManager, Platform.OS, this.props.permissionDialogTitle, this.props.permissionDialogMessage);
     this.setState({ isAuthorized, isAuthorizationChecked: true });
   }
